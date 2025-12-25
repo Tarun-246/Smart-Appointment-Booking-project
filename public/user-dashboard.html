@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GH Hospital - User Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<script>
+  if (!localStorage.getItem("username")) {
+    window.location = "login.html";
+  }
+</script>
+
+<div class="header">GH Hospital</div>
+
+<div class="dashboard">
+  <h2>User Dashboard</h2>
+  <button class="logout" onclick="logout()">Logout</button>
+
+  <div class="card">
+    <h3>Book Appointment</h3>
+
+    <label>Date</label>
+    <input type="date" id="date">
+
+    <label>Time</label>
+    <input type="time" id="time">
+
+    <button onclick="bookAppointment()">Book Appointment</button>
+  </div>
+
+  <div class="card">
+    <h3>My Appointments</h3>
+    <ul id="myBookings"></ul>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GH Hospital - Admin Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<script>
+  if (localStorage.getItem("role") !== "admin") {
+    window.location = "login.html";
+  }
+</script>
+
+<div class="header">GH Hospital</div>
+
+<div class="dashboard">
+  <h2>Admin Dashboard</h2>
+  <button class="logout" onclick="logout()">Logout</button>
+
+  <div class="card">
+    <h3>Users</h3>
+    <ul id="userList"></ul>
+  </div>
+
+  <div class="card">
+    <h3>Appointments</h3>
+    <ul id="bookingList"></ul>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
